@@ -1,0 +1,31 @@
+doctype html
+html(ng-app='songkick')
+  head
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title= title
+    link(rel='stylesheet', href='/bootstrap/css/slate.bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='icon', href='data:;base64,iVBORw0KGgo=')
+  body
+    .navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          a.navbar-brand(href='/') SongKick
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-main')
+        #navbar-main.navbar-collapse.collapse
+          ul.nav.navbar-nav
+            li
+              a(href='/add') Add new song
+    .container
+      block content
+      
+      footer
+        .row
+          .col-xs-12      
+            small Lina Lumburovska
+
+  // script(src='/angular/angular.min.js')
+  // script(src='/angular/songkick.js')
+  script(src='/javascripts/jquery-3.3.1.min.js')
+  script(src='/bootstrap/js/bootstrap.min.js')

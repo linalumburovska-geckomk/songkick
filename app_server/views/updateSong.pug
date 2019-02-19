@@ -1,0 +1,55 @@
+extends layout
+
+block content
+  h1= title
+  .row.page-header
+    .row
+      .col-xs-12.col-md-6
+        - updateSong='/update/'+ _id
+        form.form-horizontal(action=updateSong, method="post", role="form")
+          .form-group
+            label.col-xs-10.col-sm-3.control-label(for="name") Song
+            .col-xs-12.col-sm-9
+              - songName = name
+              input#song.form-control(name="name" value=songName)
+          .form-group
+            label.col-xs-10.col-sm-3.control-label(for="artist") Artist
+            .col-xs-12.col-sm-9
+              - artist = artist
+              input#artist.form-control(name="artist" value=artist)
+          .form-group
+            label.col-xs-10.col-sm-3.control-label(for="genre") Genre
+            .col-xs-12.col-sm-9
+              - genre = genre
+              input#genre.form-control(name="genre" value=genre)
+          .form-group
+            label.col-xs-10.col-sm-3.control-label(for="album") Album
+            .col-xs-12.col-sm-9
+              - album = album
+              input#genre.form-control(name="album" value=album)
+          .form-group
+            label.col-xs-10.col-sm-3.control-label(for="year") Year
+            .col-xs-12.col-sm-9
+              - year = year
+              input#genre.form-control(name="year" value=year)
+          .form-group
+            label.col-xs-10.col-sm-3.control-label(for="theme") Theme
+            .col-xs-12.col-sm-9
+              - theme = theme
+              input#genre.form-control(name="theme" value=theme)
+          .form-group
+            label.col-xs-10.col-sm-3.control-label(for="characteristics") Characteristics
+            .col-xs-12.col-sm-9
+              - characteristics = characteristics
+              input#genre.form-control(name="characteristics" value=characteristics)
+          .form-group
+            label.col-xs-10.col-sm-3.control-label(for="picture") Picture url
+            .col-xs-12.col-sm-9
+              - picture = picture
+              input#genre.form-control(name="picture" value=picture)
+          .form-group
+            label.col-xs-10.col-sm-3.control-label(for="otherSong") Other song 
+            .col-xs-12.col-sm-9
+              - otherSong = otherSong
+              input#genre.form-control(name="otherSong" value=otherSong)
+          button.btn.btn-default.btn-sm.pull-right Update song

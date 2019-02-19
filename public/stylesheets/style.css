@@ -1,0 +1,32 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.deleteButton {
+  background-color: gray;
+  border-radius: 5%;
+  border: 2px solid gray;
+  float: right;
+  font-weight: bold;
+}
+
+.updateButton {
+  background-color: gray;
+  border-radius: 5%;
+  border: 2px solid gray;
+  font-weight: bold;
+}
+
+.addEditButtons {
+  background-color: beige;
+  border-radius: 5%;
+  border: 2px solid gray;
+  font-weight: bold;
+  float: right;
+  margin-top: -20px;
+}

@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  #banner.page-header
+    .row
+      .col-lg-12
+        h1= title
+          small &nbsp;#{subtitle}
+        h4= description
+  .row
+    .col-xs-12.col-sm-8
+      .row.list-group
+       each song in songs
+        .col-xs-12.list-group-item
+          h4
+            - redirectSong= "/song/" + song._id;
+            a(href=redirectSong) Song: #{song.name}
+            span.badge.pull-right.badge-default= song.genre
+          p Artist: #{song.artist}
+            - deleteSong= "/del/" + song._id;
+            form.form-horizontal(method="POST", action=deleteSong)
+              input.deleteButton(type="submit", value="Delete song")
